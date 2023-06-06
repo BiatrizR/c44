@@ -88,8 +88,6 @@ class Game {
     this.handleResetButton();
     Player.getPlayersInfo();
 
-    //! chamar metodo
-    player.getCarsAtEnd();
 
     if (allPlayers !== undefined) {
       image(track, 0, -height * 5, width, height * 6);
@@ -128,15 +126,14 @@ class Game {
       }
       this.handlePlayerControls();
 
-      // ! 2. adicionar linha de chegada criar contante para definir onde será a linha
+    
       const finishLine = height * 6 -100;
       if(player.positionY > finishLine){
         gameState = 2;
         player.rank += 1;
-        Player.updateCarsAtEnd(player.rank);
+       
         player.update();
-        //? metodo com alert swal
-        this.showRank();
+     
 
       }
 
@@ -235,10 +232,10 @@ class Game {
     }
   }
 
-  //! 3. criar metodo show rank com alert swal
+  //riar metodo show rank com alert swal
   showRank(){
     swal({
-      title: `Incrível!${"\n"}Rank${"\n"}${player.rank}`,
+      title: ``,
       text: " ",
       imageUrl:
         "",
@@ -246,6 +243,6 @@ class Game {
       confirmButtonText: "Ok"
     });
   }
-  //? adicionar links das libs em html
+ 
   
 }
