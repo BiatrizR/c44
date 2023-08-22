@@ -127,15 +127,7 @@ class Game {
       this.handlePlayerControls();
 
     
-      const finishLine = height * 6 -100;
-      if(player.positionY > finishLine){
-        gameState = 2;
-        player.rank += 1;
-       
-        player.update();
-     
-
-      }
+   
 
 
       drawSprites();
